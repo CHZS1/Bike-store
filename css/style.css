@@ -1,0 +1,330 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+	font-family: "Montserrat Bold";
+	src: url("../fonts/montserrat-bold/montserrat-bold.woff") format("woff"), /* Modern Browsers */
+		 url("../fonts/montserrat-bold/montserrat-bold.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat Medium";
+	src: url("../fonts/montserrat-medium/montserrat-medium.woff") format("woff"), /* Modern Browsers */
+		 url("../fonts/montserrat-medium/montserrat-medium.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat Regular";
+	src: url("../fonts/montserrat-regular/montserrat-regular.woff") format("woff"), 
+		 url("../fonts/montserrat-regular/montserrat-regular.woff2") format("woff2"); 
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+    --dark-grey: #494949;
+    --grey: #D9D9D9;
+    --light: white;
+    --purple: #3922C5;
+    --blue: #2C1A9A;
+    --dark-blue: #1F1368;
+    --dark: #0C0C0C;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.main {
+    padding-top: 50px;
+}
+
+.container {
+    --offset: 60px;
+    max-width: calc(726px + (var(--offset) * 2));
+    margin: 0 auto;
+    padding: 0 var(--offset);
+}
+
+.btn-reset {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.tabs-content {
+    margin-bottom: 50px;
+}
+
+.tabs-head {
+    display: flex;
+}
+
+.btn {
+    border-radius: 16px;
+    padding: 12px 24px;
+
+    background-color: var(--purple);
+    color: var(--light);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    transition-property: background-color, color;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--blue);
+}
+
+.btn:focus {
+    outline: none;
+    background-color: var(--dark-blue);
+}
+
+.btn:active {
+    background-color: var(--dark-blue);
+}
+
+.btn-transparent {
+    background-color: transparent;
+    color: var(--dark);
+}
+
+.btn-transparent:hover {
+    background-color: transparent;
+    color: var(--blue);
+}
+
+.btn-transparent:focus {
+    background-color: transparent;
+    color: var(--dark-blue);
+}
+
+.btn-transparent:active {
+    background-color: transparent;
+    color: var(--dark-blue);
+}
+
+.btn-top {
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    padding: 20px 24px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    background-color: var(--grey);
+    transition: all .3s ease-in-out;
+}
+
+.btn-top:focus {
+    background-color: var(--light);
+    color: var(--purple);
+}
+
+.btn-top:active {
+    background-color: var(--light);
+    color: var(--purple);
+}
+
+.wraper {
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.card__wraper {
+    display: flex;
+    padding: 40px 0;
+}
+
+.card__img {
+    width: 40%;
+    height: 232px;
+    margin-right: 70px;
+    background-image: url(../img/mount.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bike-2 {
+    background-image: url(../img/woman.png);
+}
+
+.card__info {
+    width: 60%;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+}
+
+.card__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--dark-grey);
+}
+
+.card__descr:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.card__border {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 100px;
+    background-color: var(--grey);
+}
+
+.char__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 65px;
+    counter-reset: list 0;
+}
+
+.char__list--item {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.char__list--item::before {
+    counter-increment: list;
+    content: counter(list)". ";
+}
+.char__list--item-2 {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.span {
+    color: #494949;
+}
+
+.char__list--item:nth-child(even) {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.char__list--item:nth-child(odd) {
+    margin-right: 103px;
+}
+
+.char__list--item-2::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    padding-left: 36px;
+    background: url(../img/bike-list.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.char__list--item-2:nth-child(even) {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.char__list--item-2:nth-child(odd) {
+    margin-right: 103px;
+}
+
+.card__char { 
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.card__char--title {
+    display: none;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.action {
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.action-title {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.action__input {
+    margin-right: 24px;
+    border: none;
+    border-radius: 16px;
+    outline: 1px solid var(--grey);
+    padding: 14px 16px;
+    padding-right: 140px;
+    transition: outline .3s ease-in-out;
+}
+
+.action__input:focus {
+    outline: 1px solid var(--blue);
+}
+
+.confirm {
+    margin-bottom: 40px;
+    border-radius: 33px;
+    padding: 30px 36px;
+    padding-left: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.confirm__list {
+    display: flex;
+}
+
+
+

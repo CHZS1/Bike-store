@@ -1,0 +1,178 @@
+@media (max-width: 890px) {
+    .container {
+        outline: 1px solid red;
+    }
+
+    .card__wraper {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .card__img {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        background-image: url(../img/mount-mobile.png);
+    }
+
+    .bike-2 {
+        background-image: url(../img/bike-2.png);
+    }
+
+    .card__info {
+        width: 80%;
+    }
+
+    .card__char {
+        padding: 0;
+    }
+
+    .action {
+        padding: 0;
+    }
+
+    .action__input {
+        width: 50%;
+    }
+
+    .confirm {
+        padding-left: 40px;
+    }
+} 
+
+@media (max-width: 750px) {
+    .action__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action__input {
+        width: 90%;
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 14px 16px;
+    }
+
+    .btn {
+        width: 40%;
+    }
+
+    .btn-transparent,
+    .btn-bottom {
+        width: 100%;
+    }
+
+    ::placeholder {
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        --offset: 20px;
+    }
+
+    .btn-top {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .card__info {
+        width: 100%;
+    }
+
+    .card__title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 36px; 
+    }
+
+    .card__descr {
+        width: 100%;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .card__border {
+        margin-bottom: 30px;
+    }
+
+    .card__char {
+        margin-bottom: 30px;
+    }
+
+    .card__char--title {
+        display: block;
+    }
+
+    .char__list {
+        height: 100%;
+    }
+
+    .char__list--item {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .char__list--item:not(:last-child) {
+        margin: 0;
+        margin-bottom: 15px;
+    } 
+
+    .char__list--item-2 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .char__list--item-2:not(:last-child) {
+        margin: 0;
+        margin-bottom: 15px;
+    } 
+
+    .action {
+        margin: 0;
+    }
+
+    .action-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .action__input {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 14px 16px;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .tabs-content {
+        margin-bottom: 30px;
+    }
+
+    .confirm {
+        padding: 30px 20px;
+    }
+
+    .confirm__list {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 500px) {
+    .tabs-head {
+        flex-direction: column;
+    }
+}
+
+
+
