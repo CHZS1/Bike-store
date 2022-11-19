@@ -1,17 +1,20 @@
 @media (max-width: 890px) {
-    .container {
-        outline: 1px solid red;
-    }
 
     .card__wraper {
         align-items: flex-start;
         flex-direction: column;
     }
 
+    .tabs-wrap {
+        padding: 0 15px;
+        padding-bottom: 50px;
+    }
+
     .card__img {
         width: 100%;
         margin: 0;
         margin-bottom: 20px;
+        transform: translateX(0);
         background-image: url(../img/mount-mobile.png);
     }
 
@@ -20,7 +23,8 @@
     }
 
     .card__info {
-        width: 80%;
+        width: 90%;
+        padding-right: 0;
     }
 
     .card__char {
@@ -133,6 +137,7 @@
 
     .action {
         margin: 0;
+        margin-bottom: 30px;
     }
 
     .action-title {
@@ -155,10 +160,6 @@
         line-height: 21px;
     }
 
-    .tabs-content {
-        margin-bottom: 30px;
-    }
-
     .confirm {
         padding: 30px 20px;
     }
@@ -168,11 +169,99 @@
     }
 }
 
-@media (max-width: 500px) {
-    .tabs-head {
-        flex-direction: column;
+@media (max-width: 550px) {
+
+    .tabs {
+        display: none;
+    }
+
+    /*ac mobile*/
+
+    .mobile {
+        display: block;
+        
+    }
+    
+    .mobile__item {
+        margin-bottom: 20px;
+        padding: 22px 20px;
+        border-radius: 20px;
+        background-color: white;
+        transition: all .3s ease-in-out;
+    }
+    
+    .mobile__title {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        transition: all .3s ease-in-out;
+    }
+    
+    .mobile__title::after {
+        position: absolute;
+        content: url("../img/arrow.svg");
+        display: block;
+    
+       
+        top: 50%;
+        right: 15px;
+    
+        transform: translateY(-50%);
+        overflow-y: hidden;
+      
+    }
+    
+    /*.faq-title:hover {
+        background-color: #b91125;
+    }*/
+    
+    .mobile__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: white;
+        -webkit-appearance: none;
+        appearance: none;  
+        overflow-y: hidden;
+    }
+    
+    .mobile__input:checked ~ .mobile__title {
+        color: var(--purple);
+        
+    }
+    
+    .mobile__input:checked ~ .mobile__title::after {
+        transform: rotate(180deg);
+        top: 35%;
+    }
+    
+    .mobile__input:checked ~ .content-1 {
+        display: block;
+        
+    }
+    .mobile__input:checked ~ .content-2 {
+        display: block;
+        
+    }
+    
+    .content-1,
+    .content-2 {
+        display: none;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .mobile__title::after {
+        right: 3px;
     }
 }
+
+
 
 
 
