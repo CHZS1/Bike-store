@@ -2,6 +2,10 @@ html {
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -44,6 +48,7 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: var(--grey);
 }
 
 a {
@@ -81,15 +86,15 @@ h1, h2, h3, p {
     padding: 0 var(--offset);
 }
 
+.mobile {
+    display: none;
+}
+
 .btn-reset {
 	padding: 0;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
-}
-
-.tabs-content {
-    margin-bottom: 50px;
 }
 
 .tabs-head {
@@ -144,8 +149,19 @@ h1, h2, h3, p {
     color: var(--dark-blue);
 }
 
-.btn-top {
-    border-radius: 20px 20px 0 0;
+/*instead*/
+
+.tab__list {
+    display: none;
+}
+ 
+.tabs-head .btn-top .tab .active {
+    background-color: var(--light);
+    color: var(--purple);
+}
+
+.tabs-head .tab {
+    border-radius: 20px 20px 0 10px;
     outline: none;
     padding: 20px 24px;
     font-weight: 500;
@@ -155,19 +171,27 @@ h1, h2, h3, p {
     transition: all .3s ease-in-out;
 }
 
-.btn-top:focus {
+/*.tabs-head .tab:hover {
     background-color: var(--light);
     color: var(--purple);
-}
+} */
 
-.btn-top:active {
+.tabs-head .tab:focus {
     background-color: var(--light);
     color: var(--purple);
-}
+} 
 
-.wraper {
+.tabs-head .tab:active {
+    background-color: var(--light);
+    color: var(--purple);
+} 
+
+
+.tabs-wrap {
+    border-radius: 10px 15px 15px;
+    padding: 0 10px;
+    padding-bottom: 50px;
     background-color: white;
-    border-radius: 10px;
 }
 
 
@@ -180,6 +204,7 @@ h1, h2, h3, p {
     width: 40%;
     height: 232px;
     margin-right: 70px;
+    transform: translateX(-4%);
     background-image: url(../img/mount.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -191,6 +216,7 @@ h1, h2, h3, p {
 
 .card__info {
     width: 60%;
+    padding-right: 3%;
 }
 
 .card__title {
@@ -315,7 +341,7 @@ h1, h2, h3, p {
 }
 
 .confirm {
-    margin-bottom: 40px;
+    margin: 0;
     border-radius: 33px;
     padding: 30px 36px;
     padding-left: 80px;
