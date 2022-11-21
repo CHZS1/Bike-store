@@ -1,8 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (max-width: 890px) {
 
     .card__wraper {
-        align-items: flex-start;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .tabs-wrap {
@@ -14,7 +26,9 @@
         width: 100%;
         margin: 0;
         margin-bottom: 20px;
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
         background-image: url(../img/mount-mobile.png);
     }
 
@@ -46,9 +60,16 @@
 
 @media (max-width: 750px) {
     .action__form {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .action__input {
@@ -65,6 +86,22 @@
     .btn-transparent,
     .btn-bottom {
         width: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+        text-align: center;
+    }
+
+    ::-moz-placeholder {
+        text-align: center;
+    }
+
+    :-ms-input-placeholder {
+        text-align: center;
+    }
+
+    ::-ms-input-placeholder {
+        text-align: center;
     }
 
     ::placeholder {
@@ -165,21 +202,24 @@
     }
 
     .confirm__list {
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
+    .container {
+        --offset: 5px;
+    }
 
-    .tabs {
+    .tabs-5 {
         display: none;
     }
 
-    /*ac mobile*/
-
+    
     .mobile {
-        display: block;
-        
+        display: block;  
     }
     
     .mobile__item {
@@ -187,6 +227,8 @@
         padding: 22px 20px;
         border-radius: 20px;
         background-color: white;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
     }
     
@@ -198,6 +240,8 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 30px;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
     }
     
@@ -210,14 +254,14 @@
         top: 50%;
         right: 15px;
     
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    
+            -ms-transform: translateY(-50%);
+    
+                transform: translateY(-50%);
         overflow-y: hidden;
       
     }
-    
-    /*.faq-title:hover {
-        background-color: #b91125;
-    }*/
     
     .mobile__input {
         position: absolute;
@@ -225,7 +269,8 @@
         height: 0;
         background-color: white;
         -webkit-appearance: none;
-        appearance: none;  
+        -moz-appearance: none;
+             appearance: none;  
         overflow-y: hidden;
     }
     
@@ -235,7 +280,9 @@
     }
     
     .mobile__input:checked ~ .mobile__title::after {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
         top: 35%;
     }
     
@@ -262,6 +309,8 @@
 }
 
 
+      
+  
 
 
 
